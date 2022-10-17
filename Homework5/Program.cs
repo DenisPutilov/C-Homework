@@ -129,9 +129,30 @@ int[] ArrayPairs(int[] array)
     return array;
 }
 
-int[] rndArray = CreateRandomArray(5, -10, 10);
+int[] rndArray = CreateRandomArray(7, -10, 10);
 ShowArray(rndArray);
+
+
+void ShowHalfArray(int[] myArray)
+{
+    if (myArray.Length%2 == 0)
+    {
+        int[] newArray = new int[myArray.Length/2];
+    }
+    if (myArray.Length%2 == 1)
+    {
+        int[] newArray = new int[myArray.Length/2 + 1];
+    }
+        for(int i = 0; i < myArray.Length/2; i++)
+        {
+             Console.Write(myArray[i] + " ");
+        }
+    Console.WriteLine();
+}
+
 
 Console.WriteLine("Changed array");
 int[] myArray = ArrayPairs(rndArray);
-ShowArray(myArray);
+
+ShowHalfArray(myArray);
+
