@@ -74,7 +74,7 @@ Console.WriteLine($"sum of odd elements in array is {res}");
 //[3 7 22 2 78] -> 76
 
 
-/*
+
 double[] UserDoubleArray(int size)
 {
     double[] newArray = new double[size];
@@ -111,48 +111,5 @@ double[] myArray = UserDoubleArray(size);
 double res = DifferenceMinMax(myArray);
 Console.WriteLine($"difference between max and min is {res}");
 
-*/
 
-// Найдите произведение пар чисел в одномерном массиве
-// Парой считаем первый и последний элемент, второй и предпоследний и т.д.
-// Результат запишите в новом массиве
-
-int[] ArrayPairs(int[] array)
-{
-    int size = array.Length;
-
-    for (int i = 0; i <= size/2; i++)
-    {
-      array[i] = array[i]*array[size-1];
-      size--;
-    }
-    return array;
-}
-
-int[] rndArray = CreateRandomArray(7, -10, 10);
-ShowArray(rndArray);
-
-
-void ShowHalfArray(int[] myArray)
-{
-    if (myArray.Length%2 == 0)
-    {
-        int[] newArray = new int[myArray.Length/2];
-    }
-    if (myArray.Length%2 == 1)
-    {
-        int[] newArray = new int[myArray.Length/2 + 1];
-    }
-        for(int i = 0; i < myArray.Length/2; i++)
-        {
-             Console.Write(myArray[i] + " ");
-        }
-    Console.WriteLine();
-}
-
-
-Console.WriteLine("Changed array");
-int[] myArray = ArrayPairs(rndArray);
-
-ShowHalfArray(myArray);
 
